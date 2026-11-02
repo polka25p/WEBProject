@@ -2,7 +2,7 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Всі секції — Практична 1.2</title>
+    <title>Всі секції — Практична 1.3</title>
     <!-- Підключення спільних та індивідуальних стилів -->
     <link rel="stylesheet" href="shared.css">
     <link rel="stylesheet" href="style.css">
@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="section2/section2.css">
     <link rel="stylesheet" href="section3/section3.css">
     <link rel="stylesheet" href="section4/section4.css">
+    <link rel="stylesheet" href="section5/section5.css">
 </head>
 <body>
 
@@ -21,6 +22,7 @@
             <li><a href="section2/section2.html">Секція 2</a></li>
             <li><a href="section3/section3.html">Секція 3</a></li>
             <li><a href="section4/section4.html">Секція 4</a></li>
+            <li><a href="section5/section5.html">Секція 5</a></li>
         </ul>
     </nav>
 
@@ -31,6 +33,7 @@
             <li><a href="#section2">Секція 2</a></li>
             <li><a href="#section3">Секція 3</a></li>
             <li><a href="#section4">Секція 4</a></li>
+            <li><a href="#section5">Секція 5</a></li>
         </ol>
     </nav>
 
@@ -162,6 +165,81 @@
                     </tr>
                 </tbody>
             </table>
+        </section>
+
+        <hr>
+
+        <!-- Секція 5 (Форма) -->
+        <section id="section5">
+            <h2>Секція 5: Форма реєстрації</h2>
+            <form class="registration-form" action="#" method="post">
+                <!-- 1. Імʼя -->
+                <div class="input-row">
+                    <label class="wide-label" for="username">Імʼя:</label>
+                    <input type="text" id="username" name="username" maxlength="20" placeholder="Введіть ваше імʼя" required>
+                </div>
+
+                <!-- 2. Email -->
+                <div class="input-row">
+                    <label class="wide-label" for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                </div>
+
+                <!-- 3. Пароль -->
+                <div class="input-row">
+                    <label class="wide-label" for="password">Пароль:</label>
+                    <input type="password" id="password" name="password" placeholder="Введіть пароль" required>
+                </div>
+
+                <!-- 4. Вік -->
+                <div class="input-row">
+                    <label class="wide-label" for="age">Вік:</label>
+                    <input type="number" id="age" name="age" min="1" max="99" placeholder="1–99">
+                </div>
+
+                <!-- 5. Стать (Radio Buttons) -->
+                <div class="input-row">
+                    <label class="wide-label" for="gender-male">Стать:</label>
+                    <span class="radio-group">
+                        <input type="radio" id="gender-male" name="gender" value="male">
+                        <label for="gender-male">чол</label>
+
+                        <input type="radio" id="gender-female" name="gender" value="female">
+                        <label for="gender-female">жін</label>
+
+                        <input type="radio" id="gender-not-specified" name="gender" value="not_specified" checked>
+                        <label for="gender-not-specified">не вказано</label>
+                    </span>
+                </div>
+
+                <!-- 6. Група (Select) -->
+                <div class="input-row">
+                    <label class="wide-label" for="group">Група:</label>
+                    <select id="group" name="group">
+                        <option value="КНД-11">КНД-11</option>
+                        <option value="КНД-12">КНД-12</option>
+                        <option value="КНД-13">КНД-13</option>
+                        <option value="КНД-14">КНД-14</option>
+                    </select>
+                </div>
+
+                <!-- 7. Біографія (Textarea) -->
+                <div class="input-row">
+                    <label class="wide-label" for="bio">Біографія:</label>
+                    <textarea id="bio" name="bio" rows="4" cols="30" placeholder="Розкажіть коротко про себе..."></textarea>
+                </div>
+
+                <!-- 8. Згода на обробку даних (Checkbox) -->
+                <div class="input-row checkbox-row">
+                    <input type="checkbox" id="consent" name="consent" required>
+                    <label for="consent">Згода на обробку даних</label>
+                </div>
+
+                <!-- 9. Кнопка відправки -->
+                <div class="input-row submit-row">
+                    <button type="submit">Відправити</button>
+                </div>
+            </form>
         </section>
     </main>
 
