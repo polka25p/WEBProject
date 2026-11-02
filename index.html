@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Всі секції — Практична 1.2</title>
+    <!-- Підключення спільних та індивідуальних стилів -->
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="section1/section1.css">
+    <link rel="stylesheet" href="section2/section2.css">
+    <link rel="stylesheet" href="section3/section3.css">
+    <link rel="stylesheet" href="section4/section4.css">
+</head>
+<body>
+
+    <!-- 1. Головна навігація між сторінками -->
+    <nav id="main-nav">
+        <ul class="main-navigation">
+            <li><a href="index.html">Всі секції</a></li>
+            <li><a href="section1/section1.html">Секція 1</a></li>
+            <li><a href="section2/section2.html">Секція 2</a></li>
+            <li><a href="section3/section3.html">Секція 3</a></li>
+            <li><a href="section4/section4.html">Секція 4</a></li>
+        </ul>
+    </nav>
+
+    <!-- 2. Фіксована навігація по секціях поточної сторінки -->
+    <nav id="page-nav">
+        <ol>
+            <li><a href="#section1">Секція 1</a></li>
+            <li><a href="#section2">Секція 2</a></li>
+            <li><a href="#section3">Секція 3</a></li>
+            <li><a href="#section4">Секція 4</a></li>
+        </ol>
+    </nav>
+
+    <!-- Кнопка повернення вгору -->
+    <a href="#main-nav" id="back-to-top" title="Вгору">&#8679;</a>
+
+    <main>
+        <!-- Секція 1 -->
+        <section id="section1">
+            <h2>Секція 1</h2>
+            <div class="section1-content">
+                <a href="https://google.com" target="_blank">
+                    <img 
+                        src="https://picsum.photos/200/150" 
+                        alt="Приклад зображення" 
+                        title="Відкрити Google" 
+                        width="200" 
+                        height="150"
+                    >
+                </a>
+                <p>
+                    Lorem ipsum dolor sit amet, <b>жирний текст для акценту</b>, consectetur adipiscing elit. 
+                    <i>Курсивний фрагмент речення</i>, sed do eiusmod tempor incididunt ut labore. 
+                    <span class="highlight">червоний колір</span>, et dolore magna aliqua. 
+                    <u>Підкреслений фрагмент</u> для демонстрації оформлення, а також 
+                    <del>закреслений застарілий текст</del>. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                </p>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- Секція 2 -->
+        <section id="section2">
+            <h2>Секція 2</h2>
+            <video src="big_buck_bunny_720p_1mb.mp4" width="480" height="270" autoplay loop muted controls>
+                Ваш браузер не підтримує відтворення відео.
+            </video>
+        </section>
+
+        <hr>
+
+        <!-- Секція 3 -->
+        <section id="section3">
+            <h2>Секція 3</h2>
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/iXLxaa2UKbU?start=60&end=70&autoplay=1&mute=1&loop=1&playlist=iXLxaa2UKbU" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        </section>
+
+        <hr>
+
+        <!-- Секція 4 (Таблиця) -->
+        <section id="section4">
+            <h2>Секція 4: Таблиця</h2>
+            <table class="custom-table">
+                <thead>
+                    <tr>
+                        <th rowspan="3">No</th>
+                        <th colspan="2">Name</th>
+                        <th colspan="6">Date of</th>
+                    </tr>
+                    <tr>
+                        <th rowspan="2">First</th>
+                        <th rowspan="2">Last</th>
+                        <th colspan="3">Birth</th>
+                        <th colspan="3">Death</th>
+                    </tr>
+                    <tr>
+                        <th>D</th>
+                        <th>M</th>
+                        <th>Y</th>
+                        <th>D</th>
+                        <th>M</th>
+                        <th>Y</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Anna</td>
+                        <td>Johnson</td>
+                        <td>1</td>
+                        <td>5</td>
+                        <td>91</td>
+                        <td>n</td>
+                        <td>n</td>
+                        <td>n</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Erik</td>
+                        <td>Lingren</td>
+                        <td></td>
+                        <td>2</td>
+                        <td>92</td>
+                        <td>n</td>
+                        <td>n</td>
+                        <td>n</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Amily</td>
+                        <td>Blunt</td>
+                        <td>3</td>
+                        <td>6</td>
+                        <td></td>
+                        <td>n</td>
+                        <td>n</td>
+                        <td>n</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>John</td>
+                        <td>Wick</td>
+                        <td>4</td>
+                        <td>7</td>
+                        <td>93</td>
+                        <td>n</td>
+                        <td>n</td>
+                        <td>n</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+</body>
+</html>

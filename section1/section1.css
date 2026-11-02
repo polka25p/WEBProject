@@ -1,0 +1,12 @@
+.section1-content {
+    overflow: hidden;
+}
+
+.section1-content img {
+    float: left;
+    margin-right: 15px;
+}
+
+.highlight {
+    color: #e63946;
+}

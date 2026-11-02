@@ -1,0 +1,22 @@
+html {
+    scroll-behavior: smooth;
+    font-family: Arial, sans-serif;
+}
+
+ul.main-navigation {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 20px 0;
+}
+
+ul.main-navigation a {
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: bold;
+}
+
+ul.main-navigation a:hover {
+    text-decoration: underline;
+}
