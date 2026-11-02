@@ -1,66 +1,237 @@
+/* ==========================================================================
+   CLEAN & LIGHTWEIGHT DESIGN SYSTEM + ПРАКТИЧНА РОБОТА 2.1 (Flexbox & Cards)
+   ========================================================================== */
+
+:root {
+    --bg-canvas: #F8FAFC;
+    --bg-surface: #FFFFFF;
+    --bg-subtle: #F1F5F9;
+    --text-primary: #1E293B;
+    --text-body: #334155;
+    --text-muted: #64748B;
+    --text-subtle: #94A3B8;
+    --accent-primary: #0284C7;
+    --accent-hover: #0369A1;
+    --accent-soft: #F0F9FF;
+    --accent-border: #BAE6FD;
+    --border-light: #E2E8F0;
+    --border-hover: #CBD5E1;
+    --radius-sm: 8px;
+    --radius-md: 10px;
+    --radius-lg: 12px;
+    --shadow-subtle: 0 2px 8px rgba(15, 23, 42, 0.04);
+    --shadow-hover: 0 6px 18px rgba(15, 23, 42, 0.07);
+    --transition-base: all 0.2s ease;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* ==========================================================================
+   1. АРХІТЕКТУРА СТОРІНКИ: БІЧНА ПАНЕЛЬ (<aside>) + ГОЛОВНА ЧАСТИНА (<main>)
+   ========================================================================== */
+
+.page-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    margin-right: 170px;
+}
+
+/* Бічна панель (<aside>) з 4 прямокутними пунктами меню у стовпчик */
+aside.sidebar {
+    width: 220px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 24px;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    padding: 16px;
+    box-shadow: var(--shadow-subtle);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar-item {
+    display: block;
+    padding: 12px 16px;
+    background-color: var(--bg-canvas);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: left;
+    transition: var(--transition-base);
+}
+
+.sidebar-item:hover {
+    background-color: var(--accent-soft);
+    border-color: var(--accent-border);
+    color: var(--accent-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-subtle);
+}
+
+main {
+    flex: 1;
+    min-width: 0;
+    padding-bottom: 40px;
+}
+
+/* ==========================================================================
+   2. КОНТЕЙНЕР КАРТОК (.card-container) ТА КАРТКА (.card) — ПРАКТИЧНА 2.1
+   ========================================================================== */
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    width: 250px;
+    height: 320px;
+    box-sizing: border-box;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-hover);
+    border-radius: var(--radius-lg);
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+}
+
+.card:hover {
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    border-color: var(--accent-border);
+    transform: translateY(-2px);
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.card-image,
+.card img {
+    width: 150px;
+    height: 150px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-light);
+    display: block;
+}
+
+.card-text,
+.card p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.45;
+    color: var(--text-muted);
+}
+
+/* ==========================================================================
+   3. ФІКСОВАНА НАВІГАЦІЯ ТА КНОПКА ПОВЕРНЕННЯ ВГОРУ («Back to top»)
+   ========================================================================== */
+
 #page-nav {
     position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: #ffffff;
-    border: 1px solid #333333;
-    padding: 10px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    top: 24px;
+    right: 24px;
+    background-color: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    padding: 14px 22px;
+    box-shadow: var(--shadow-subtle);
     z-index: 1000;
+    transition: var(--transition-base);
+}
+
+#page-nav:hover {
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-hover);
 }
 
 #page-nav ol {
     margin: 0;
-    padding-left: 20px;
+    padding-left: 18px;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+#page-nav li {
+    margin-bottom: 6px;
+}
+
+#page-nav li:last-child {
+    margin-bottom: 0;
 }
 
 #page-nav a {
     text-decoration: none;
-    color: #000;
+    color: var(--text-body);
+    font-weight: 500;
+    transition: var(--transition-base);
 }
 
 #page-nav a:hover {
-    color: #0066cc;
+    color: var(--accent-primary);
 }
 
+/* Кнопка повернення вгору («Back to top») */
 #back-to-top {
     position: fixed;
     bottom: 25px;
     right: 25px;
-    width: 42px;
-    height: 42px;
-    border: 2px solid #333;
-    background-color: #fff;
-    color: #333;
-    font-size: 26px;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--border-hover);
+    background-color: var(--bg-surface);
+    color: var(--text-primary);
+    font-size: 20px;
+    font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-subtle);
     z-index: 1000;
+    transition: var(--transition-base);
 }
 
 #back-to-top:hover {
-    background-color: #f0f0f0;
+    background-color: var(--accent-soft);
+    border-color: var(--accent-border);
+    color: var(--accent-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
 }
 
-main {
-    margin-right: 180px;
-    padding-bottom: 80px;
-}
+/* ==========================================================================
+   4. СТИЛІЗАЦІЯ ФОРМИ (Практична 1.3)
+   ========================================================================== */
 
-/* Стилізація форми (Практична 1.3) */
 .registration-form {
-    max-width: 520px;
-    background-color: #ffffff;
-    padding: 24px 28px;
-    border: 1px solid #e0e4e8;
-    border-radius: 10px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-    color: #2c3e50;
+    max-width: 540px;
+    background-color: var(--bg-surface);
+    padding: 28px 32px;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-subtle);
+    font-family: var(--font-sans);
+    color: var(--text-body);
 }
 
 .input-row {
@@ -70,11 +241,11 @@ main {
 .wide-label {
     display: inline-block;
     width: 150px;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 14px;
-    color: #34495e;
+    color: var(--text-primary);
     vertical-align: top;
-    padding-top: 8px;
+    padding-top: 9px;
     cursor: pointer;
 }
 
@@ -84,15 +255,20 @@ main {
 .input-row input[type="number"],
 .input-row select,
 .input-row textarea {
-    padding: 8px 12px;
-    border: 1px solid #cbd5e1;
-    border-radius: 6px;
+    padding: 9px 13px;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
     font-family: inherit;
     font-size: 14px;
-    color: #1e293b;
-    background-color: #f8fafc;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    color: var(--text-primary);
+    background-color: var(--bg-canvas);
+    transition: var(--transition-base);
     box-sizing: border-box;
+}
+
+.input-row input::placeholder,
+.input-row textarea::placeholder {
+    color: var(--text-subtle);
 }
 
 .input-row input[type="text"],
@@ -118,9 +294,9 @@ main {
 .input-row select:focus,
 .input-row textarea:focus {
     outline: none;
-    border-color: #0066cc;
-    background-color: #ffffff;
-    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.15);
+    border-color: var(--accent-primary);
+    background-color: var(--bg-surface);
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.12);
 }
 
 .radio-group {
@@ -130,13 +306,14 @@ main {
 
 .radio-group input[type="radio"] {
     margin: 0 4px 0 0;
-    accent-color: #0066cc;
+    accent-color: var(--accent-primary);
     cursor: pointer;
 }
 
 .radio-group label {
-    margin-right: 14px;
+    margin-right: 16px;
     font-size: 14px;
+    color: var(--text-body);
     cursor: pointer;
 }
 
@@ -150,13 +327,14 @@ main {
 .checkbox-row input[type="checkbox"] {
     width: 16px;
     height: 16px;
-    accent-color: #0066cc;
+    accent-color: var(--accent-primary);
     cursor: pointer;
     margin: 0;
 }
 
 .checkbox-row label {
     font-size: 14px;
+    color: var(--text-body);
     cursor: pointer;
     user-select: none;
 }
@@ -168,23 +346,36 @@ main {
 
 .input-row button[type="submit"] {
     padding: 10px 24px;
-    background-color: #0066cc;
-    color: #ffffff;
+    background-color: var(--accent-primary);
+    color: #FFFFFF;
     font-family: inherit;
-    font-size: 15px;
-    font-weight: 600;
-    border: none;
-    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm);
     cursor: pointer;
-    box-shadow: 0 2px 6px rgba(0, 102, 204, 0.25);
-    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+    box-shadow: var(--shadow-subtle);
+    transition: var(--transition-base);
 }
 
 .input-row button[type="submit"]:hover {
-    background-color: #0052a3;
-    box-shadow: 0 4px 10px rgba(0, 102, 204, 0.35);
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
 }
 
 .input-row button[type="submit"]:active {
-    transform: translateY(1px);
+    transform: translateY(0);
+}
+
+@media (max-width: 960px) {
+    .page-layout {
+        flex-direction: column;
+        margin-right: 0;
+    }
+
+    aside.sidebar {
+        width: 100%;
+        position: static;
+    }
 }

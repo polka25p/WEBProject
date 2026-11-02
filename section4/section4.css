@@ -2,11 +2,24 @@ table.custom-table {
     border-collapse: collapse; 
     width: 650px;             
     text-align: center;
+    background-color: #FFFFFF;
+    color: #334155;
+    font-size: 14px;
+}
+
+table.custom-table th {
+    background-color: #F8FAFC;
+    color: #1E293B;
+    font-weight: 600;
 }
 
 table.custom-table, 
 table.custom-table th, 
 table.custom-table td {
-    border: 1px solid black;   
-    padding: 6px 10px;
+    border: 1px solid #CBD5E1;   
+    padding: 8px 12px;
+}
+
+table.custom-table tbody tr:hover {
+    background-color: #F0F9FF;
 }

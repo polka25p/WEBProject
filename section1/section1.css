@@ -4,9 +4,11 @@
 
 .section1-content img {
     float: left;
-    margin-right: 15px;
+    margin-right: 18px;
+    border-radius: 8px;
+    border: 1px solid #E2E8F0;
 }
 
 .highlight {
-    color: #e63946;
+    color: #E11D48;
 }

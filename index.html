@@ -2,7 +2,7 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Всі секції — Практична 1.3</title>
+    <title>Всі секції — Практична 2.1</title>
     <!-- Підключення спільних та індивідуальних стилів -->
     <link rel="stylesheet" href="shared.css">
     <link rel="stylesheet" href="style.css">
@@ -29,6 +29,7 @@
     <!-- 2. Фіксована навігація по секціях поточної сторінки -->
     <nav id="page-nav">
         <ol>
+            <li><a href="#cards-section">Картки (2.1)</a></li>
             <li><a href="#section1">Секція 1</a></li>
             <li><a href="#section2">Секція 2</a></li>
             <li><a href="#section3">Секція 3</a></li>
@@ -37,211 +38,245 @@
         </ol>
     </nav>
 
-    <!-- Кнопка повернення вгору -->
-    <a href="#main-nav" id="back-to-top" title="Вгору">&#8679;</a>
+    <!-- Кнопка швидкого повернення вгору (Back to top) -->
+    <a href="#main-nav" id="back-to-top" title="Вгору">&uarr;</a>
 
-    <main>
-        <!-- Секція 1 -->
-        <section id="section1">
-            <h2>Секція 1</h2>
-            <div class="section1-content">
-                <a href="https://google.com" target="_blank">
-                    <img 
-                        src="https://picsum.photos/200/150" 
-                        alt="Приклад зображення" 
-                        title="Відкрити Google" 
-                        width="200" 
-                        height="150"
-                    >
-                </a>
-                <p>
-                    Lorem ipsum dolor sit amet, <b>жирний текст для акценту</b>, consectetur adipiscing elit. 
-                    <i>Курсивний фрагмент речення</i>, sed do eiusmod tempor incididunt ut labore. 
-                    <span class="highlight">червоний колір</span>, et dolore magna aliqua. 
-                    <u>Підкреслений фрагмент</u> для демонстрації оформлення, а також 
-                    <del>закреслений застарілий текст</del>. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                </p>
-            </div>
-        </section>
+    <!-- Двоколонковий макет: Бічна панель (<aside>) + Головна частина (<main>) -->
+    <div class="page-layout">
+        <!-- Бічна панель зліва з 4 прямокутними пунктами меню у стовпчик -->
+        <aside class="sidebar">
+            <a href="#cards-section" class="sidebar-item">Галерея карток</a>
+            <a href="#section1" class="sidebar-item">Текстова секція</a>
+            <a href="#section4" class="sidebar-item">Таблиця даних</a>
+            <a href="#section5" class="sidebar-item">Форма реєстрації</a>
+        </aside>
 
-        <hr>
-
-        <!-- Секція 2 -->
-        <section id="section2">
-            <h2>Секція 2</h2>
-            <video src="big_buck_bunny_720p_1mb.mp4" width="480" height="270" autoplay loop muted controls>
-                Ваш браузер не підтримує відтворення відео.
-            </video>
-        </section>
-
-        <hr>
-
-        <!-- Секція 3 -->
-        <section id="section3">
-            <h2>Секція 3</h2>
-            <iframe 
-                width="560" 
-                height="315" 
-                src="https://www.youtube.com/embed/iXLxaa2UKbU?start=60&end=70&autoplay=1&mute=1&loop=1&playlist=iXLxaa2UKbU" 
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen>
-            </iframe>
-        </section>
-
-        <hr>
-
-        <!-- Секція 4 (Таблиця) -->
-        <section id="section4">
-            <h2>Секція 4: Таблиця</h2>
-            <table class="custom-table">
-                <thead>
-                    <tr>
-                        <th rowspan="3">No</th>
-                        <th colspan="2">Name</th>
-                        <th colspan="6">Date of</th>
-                    </tr>
-                    <tr>
-                        <th rowspan="2">First</th>
-                        <th rowspan="2">Last</th>
-                        <th colspan="3">Birth</th>
-                        <th colspan="3">Death</th>
-                    </tr>
-                    <tr>
-                        <th>D</th>
-                        <th>M</th>
-                        <th>Y</th>
-                        <th>D</th>
-                        <th>M</th>
-                        <th>Y</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Anna</td>
-                        <td>Johnson</td>
-                        <td>1</td>
-                        <td>5</td>
-                        <td>91</td>
-                        <td>n</td>
-                        <td>n</td>
-                        <td>n</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Erik</td>
-                        <td>Lingren</td>
-                        <td></td>
-                        <td>2</td>
-                        <td>92</td>
-                        <td>n</td>
-                        <td>n</td>
-                        <td>n</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Amily</td>
-                        <td>Blunt</td>
-                        <td>3</td>
-                        <td>6</td>
-                        <td></td>
-                        <td>n</td>
-                        <td>n</td>
-                        <td>n</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>John</td>
-                        <td>Wick</td>
-                        <td>4</td>
-                        <td>7</td>
-                        <td>93</td>
-                        <td>n</td>
-                        <td>n</td>
-                        <td>n</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <hr>
-
-        <!-- Секція 5 (Форма) -->
-        <section id="section5">
-            <h2>Секція 5: Форма реєстрації</h2>
-            <form class="registration-form" action="#" method="post">
-                <!-- 1. Імʼя -->
-                <div class="input-row">
-                    <label class="wide-label" for="username">Імʼя:</label>
-                    <input type="text" id="username" name="username" maxlength="20" placeholder="Введіть ваше імʼя" required>
+        <!-- Головна частина -->
+        <main>
+            <!-- Практична 2.1: Контейнер для карток (Flexbox) -->
+            <section id="cards-section">
+                <h2>Практична 2.1: Картки (Flexbox)</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-title">Картка проєкту</div>
+                        <img 
+                            class="card-image" 
+                            src="https://picsum.photos/300/300" 
+                            alt="Квадратне зображення картки" 
+                            width="150" 
+                            height="150"
+                        >
+                        <p class="card-text">Короткий опис елемента з рівномірним Flexbox-вирівнюванням.</p>
+                    </div>
                 </div>
+            </section>
 
-                <!-- 2. Email -->
-                <div class="input-row">
-                    <label class="wide-label" for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+            <hr>
+
+            <!-- Секція 1 -->
+            <section id="section1">
+                <h2>Секція 1</h2>
+                <div class="section1-content">
+                    <a href="https://google.com" target="_blank">
+                        <img 
+                            src="https://picsum.photos/200/150" 
+                            alt="Приклад зображення" 
+                            title="Відкрити Google" 
+                            width="200" 
+                            height="150"
+                        >
+                    </a>
+                    <p>
+                        Lorem ipsum dolor sit amet, <b>жирний текст для акценту</b>, consectetur adipiscing elit. 
+                        <i>Курсивний фрагмент речення</i>, sed do eiusmod tempor incididunt ut labore. 
+                        <span class="highlight">червоний колір</span>, et dolore magna aliqua. 
+                        <u>Підкреслений фрагмент</u> для демонстрації оформлення, а також 
+                        <del>закреслений застарілий текст</del>. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
                 </div>
+            </section>
 
-                <!-- 3. Пароль -->
-                <div class="input-row">
-                    <label class="wide-label" for="password">Пароль:</label>
-                    <input type="password" id="password" name="password" placeholder="Введіть пароль" required>
-                </div>
+            <hr>
 
-                <!-- 4. Вік -->
-                <div class="input-row">
-                    <label class="wide-label" for="age">Вік:</label>
-                    <input type="number" id="age" name="age" min="1" max="99" placeholder="1–99">
-                </div>
+            <!-- Секція 2 -->
+            <section id="section2">
+                <h2>Секція 2</h2>
+                <video src="big_buck_bunny_720p_1mb.mp4" width="480" height="270" autoplay loop muted controls>
+                    Ваш браузер не підтримує відтворення відео.
+                </video>
+            </section>
 
-                <!-- 5. Стать (Radio Buttons) -->
-                <div class="input-row">
-                    <label class="wide-label" for="gender-male">Стать:</label>
-                    <span class="radio-group">
-                        <input type="radio" id="gender-male" name="gender" value="male">
-                        <label for="gender-male">чол</label>
+            <hr>
 
-                        <input type="radio" id="gender-female" name="gender" value="female">
-                        <label for="gender-female">жін</label>
+            <!-- Секція 3 -->
+            <section id="section3">
+                <h2>Секція 3</h2>
+                <iframe 
+                    width="560" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/iXLxaa2UKbU?start=60&end=70&autoplay=1&mute=1&loop=1&playlist=iXLxaa2UKbU" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+            </section>
 
-                        <input type="radio" id="gender-not-specified" name="gender" value="not_specified" checked>
-                        <label for="gender-not-specified">не вказано</label>
-                    </span>
-                </div>
+            <hr>
 
-                <!-- 6. Група (Select) -->
-                <div class="input-row">
-                    <label class="wide-label" for="group">Група:</label>
-                    <select id="group" name="group">
-                        <option value="КНД-11">КНД-11</option>
-                        <option value="КНД-12">КНД-12</option>
-                        <option value="КНД-13">КНД-13</option>
-                        <option value="КНД-14">КНД-14</option>
-                    </select>
-                </div>
+            <!-- Секція 4 (Таблиця) -->
+            <section id="section4">
+                <h2>Секція 4: Таблиця</h2>
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th rowspan="3">No</th>
+                            <th colspan="2">Name</th>
+                            <th colspan="6">Date of</th>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">First</th>
+                            <th rowspan="2">Last</th>
+                            <th colspan="3">Birth</th>
+                            <th colspan="3">Death</th>
+                        </tr>
+                        <tr>
+                            <th>D</th>
+                            <th>M</th>
+                            <th>Y</th>
+                            <th>D</th>
+                            <th>M</th>
+                            <th>Y</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Anna</td>
+                            <td>Johnson</td>
+                            <td>1</td>
+                            <td>5</td>
+                            <td>91</td>
+                            <td>n</td>
+                            <td>n</td>
+                            <td>n</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Erik</td>
+                            <td>Lingren</td>
+                            <td></td>
+                            <td>2</td>
+                            <td>92</td>
+                            <td>n</td>
+                            <td>n</td>
+                            <td>n</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Amily</td>
+                            <td>Blunt</td>
+                            <td>3</td>
+                            <td>6</td>
+                            <td></td>
+                            <td>n</td>
+                            <td>n</td>
+                            <td>n</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>John</td>
+                            <td>Wick</td>
+                            <td>4</td>
+                            <td>7</td>
+                            <td>93</td>
+                            <td>n</td>
+                            <td>n</td>
+                            <td>n</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
-                <!-- 7. Біографія (Textarea) -->
-                <div class="input-row">
-                    <label class="wide-label" for="bio">Біографія:</label>
-                    <textarea id="bio" name="bio" rows="4" cols="30" placeholder="Розкажіть коротко про себе..."></textarea>
-                </div>
+            <hr>
 
-                <!-- 8. Згода на обробку даних (Checkbox) -->
-                <div class="input-row checkbox-row">
-                    <input type="checkbox" id="consent" name="consent" required>
-                    <label for="consent">Згода на обробку даних</label>
-                </div>
+            <!-- Секція 5 (Форма) -->
+            <section id="section5">
+                <h2>Секція 5: Форма реєстрації</h2>
+                <form class="registration-form" action="#" method="post">
+                    <!-- 1. Імʼя -->
+                    <div class="input-row">
+                        <label class="wide-label" for="username">Імʼя:</label>
+                        <input type="text" id="username" name="username" maxlength="20" placeholder="Введіть ваше імʼя" required>
+                    </div>
 
-                <!-- 9. Кнопка відправки -->
-                <div class="input-row submit-row">
-                    <button type="submit">Відправити</button>
-                </div>
-            </form>
-        </section>
-    </main>
+                    <!-- 2. Email -->
+                    <div class="input-row">
+                        <label class="wide-label" for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                    </div>
 
+                    <!-- 3. Пароль -->
+                    <div class="input-row">
+                        <label class="wide-label" for="password">Пароль:</label>
+                        <input type="password" id="password" name="password" placeholder="Введіть пароль" required>
+                    </div>
+
+                    <!-- 4. Вік -->
+                    <div class="input-row">
+                        <label class="wide-label" for="age">Вік:</label>
+                        <input type="number" id="age" name="age" min="1" max="99" placeholder="1–99">
+                    </div>
+
+                    <!-- 5. Стать (Radio Buttons) -->
+                    <div class="input-row">
+                        <label class="wide-label" for="gender-male">Стать:</label>
+                        <span class="radio-group">
+                            <input type="radio" id="gender-male" name="gender" value="male">
+                            <label for="gender-male">чол</label>
+
+                            <input type="radio" id="gender-female" name="gender" value="female">
+                            <label for="gender-female">жін</label>
+
+                            <input type="radio" id="gender-not-specified" name="gender" value="not_specified" checked>
+                            <label for="gender-not-specified">не вказано</label>
+                        </span>
+                    </div>
+
+                    <!-- 6. Група (Select) -->
+                    <div class="input-row">
+                        <label class="wide-label" for="group">Група:</label>
+                        <select id="group" name="group">
+                            <option value="КНД-11">КНД-11</option>
+                            <option value="КНД-12">КНД-12</option>
+                            <option value="КНД-13">КНД-13</option>
+                            <option value="КНД-14">КНД-14</option>
+                        </select>
+                    </div>
+
+                    <!-- 7. Біографія (Textarea) -->
+                    <div class="input-row">
+                        <label class="wide-label" for="bio">Біографія:</label>
+                        <textarea id="bio" name="bio" rows="4" cols="30" placeholder="Розкажіть коротко про себе..."></textarea>
+                    </div>
+
+                    <!-- 8. Згода на обробку даних (Checkbox) -->
+                    <div class="input-row checkbox-row">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <label for="consent">Згода на обробку даних</label>
+                    </div>
+
+                    <!-- 9. Кнопка відправки -->
+                    <div class="input-row submit-row">
+                        <button type="submit">Відправити</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <!-- Підключення скрипта для дублювання карток (Практична 2.1) -->
+    <script src="script.js"></script>
 </body>
 </html>
