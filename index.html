@@ -2,7 +2,7 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Всі секції — Практична 2.1</title>
+    <title>Всі секції — Практична 2.1 та Події JS</title>
     <!-- Підключення спільних та індивідуальних стилів -->
     <link rel="stylesheet" href="shared.css">
     <link rel="stylesheet" href="style.css">
@@ -29,6 +29,7 @@
     <!-- 2. Фіксована навігація по секціях поточної сторінки -->
     <nav id="page-nav">
         <ol>
+            <li><a href="#ball-section">Події JS: М'яч</a></li>
             <li><a href="#cards-section">Картки (2.1)</a></li>
             <li><a href="#section1">Секція 1</a></li>
             <li><a href="#section2">Секція 2</a></li>
@@ -53,6 +54,48 @@
 
         <!-- Головна частина -->
         <main>
+            <!-- Практична робота: Обробка подій у JavaScript (М'яч) -->
+            <section id="ball-section">
+                <h2>Практична робота: Обробка подій у JavaScript (М'яч)</h2>
+                <p class="ball-instructions">
+                    Сфокусуйтесь на м'ячі (кліком або клавішею <kbd>Tab</kbd>).
+                    Керування: <kbd>&larr;</kbd> <kbd>&uarr;</kbd> <kbd>&rarr;</kbd> <kbd>&darr;</kbd> — крок <strong>100px</strong>,
+                    <kbd>Shift</kbd> + стрілка — <strong>10px</strong>,
+                    <kbd>Ctrl</kbd> + стрілка — <strong>1px</strong>.
+                    Обертання (+45&deg;): <strong>клік</strong> по м'ячу або <kbd>Пробіл</kbd>.
+                    Також м'яч можна перетягувати мишею.
+                </p>
+
+                <div class="ball-hud">
+                    <div class="ball-metrics">
+                        <span class="ball-metric" id="ball-coords">Позиція: X: 40px, Y: 40px</span>
+                        <span class="ball-metric" id="ball-angle">Кут: 0&deg; (ціль: 180&deg;)</span>
+                    </div>
+                    <button type="button" class="ball-reset-btn" id="ball-reset">Скинути</button>
+                </div>
+
+                <div class="ball-status" id="ball-status" role="status" aria-live="polite">
+                    Доставте м'яч у ціль та поверніть його на 180&deg; (стрілкою вниз).
+                </div>
+
+                <div class="ball-field" id="ball-field">
+                    <div class="ball-target" id="ball-target" aria-label="Ціль для м'яча (потрібний кут 180 градусів)">
+                        <span class="ball-target-arrow" aria-hidden="true">&darr;</span>
+                        <span class="ball-target-label">180&deg;</span>
+                    </div>
+                    <div
+                        class="ball"
+                        tabindex="0"
+                        role="application"
+                        aria-label="Ігровий м'яч. Стрілки для руху, Пробіл або клік для обертання, перетягування мишею."
+                    >
+                        <span class="ball-marker" aria-hidden="true">&uarr;</span>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
             <!-- Практична 2.1: Контейнер для карток (Flexbox) -->
             <section id="cards-section">
                 <h2>Практична 2.1: Картки (Flexbox)</h2>
